@@ -35,21 +35,21 @@ class FBC:
 		print("-"*45)
 		print(self.__doc__)
 		print("-"*45)
-		print(f"::METHODS")
+		print(f"\n:: METHODS")
 		for method in self._methods():
-			print(f"\t- {method}")
+			print(f"  - {method}")
 			
-		print(f"::INPS")
+		print(f"\n:: INPS")
 		for k, v in self.inps.items():
-			print(f"\t- {k} [{type(v)}]")
+			print(f"  - {k} [{type(v)}]")
 			
-		print(f"::DEBUGS")
+		print(f"\n:: DEBUGS")
 		for k, v in self.debugs.items():
-			print(f"\t- {k} [{type(v)}]")
+			print(f"  - {k} [{type(v)}]")
 		
-		print(f"::OUTS")
+		print(f"\n:: OUTS")
 		for k, v in self.outs.items():
-			print(f"\t- {k} [{type(v)}]")
+			print(f"  - {k} [{type(v)}]")
 	
 	def _methods(self):
 		"""returns methods as a list"""
@@ -90,8 +90,3 @@ class FBC:
 			logging.getLogger().addHandler(file_handler)
 			
 		return logging.getLogger()
-
-	
-
-		
-	
