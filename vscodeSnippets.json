@@ -1,5 +1,5 @@
 {
-  \\ Paste it to VS Code python.json to add these snippets.
+  // Paste it to VS Code python.json to add these snippets.
   
 	"FC": {
 		"prefix": "fc",
