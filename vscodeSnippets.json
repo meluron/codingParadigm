@@ -82,7 +82,7 @@
 		],
 		"description": "Creates a Python class with FBC base class boilerplate"
 	},
-	"FBC_Template": {
+	"FBC": {
 		"prefix": "fbc",
 		"description": "Functional Base Class with Logging by Ankit Anand",
 		"body": [
@@ -96,7 +96,7 @@
 			"import logging",
 			"from logging.handlers import RotatingFileHandler",
 			"",
-			"LOG_LEVEL = \"INFO\"",
+			"LOG_LEVEL = \"WARNING\"",
 			"LOG_FP = Path(\"./log.txt\")",
 			"",
 			"class LogColorFormatter(logging.Formatter):",
@@ -112,9 +112,9 @@
 			"    RESET_CODE = \"\\u001b[0m\"",
 			"",
 			"    def format(self, record):",
-			"        log_msg = super().format(record)",
+			"        logMsg = super().format(record)",
 			"        color = self.COLOR_CODES.get(record.levelname, self.RESET_CODE)",
-			"        return f\"{color}{log_msg}{self.RESET_CODE}\"",
+			"        return f\"{color}{logMsg}{self.RESET_CODE}\"",
 			"",
 			"class FBC:",
 			"    \"\"\"Functional Base Class (by Ankit Anand)\"\"\"",
@@ -183,17 +183,17 @@
 			"            )",
 			"",
 			"            # 🎨 Console Handler with Colors",
-			"            console_handler = logging.StreamHandler(sys.stdout)",
-			"            console_handler.setFormatter(LogColorFormatter(formatter._fmt))",
-			"            logger.addHandler(console_handler)",
+			"            consoleHandler = logging.StreamHandler(sys.stdout)",
+			"            consoleHandler.setFormatter(LogColorFormatter(formatter._fmt))",
+			"            logger.addHandler(consoleHandler)",
 			"",
 			"            # 📂 Rotating File Handler",
 			"            if logFp:",
-			"                file_handler = RotatingFileHandler(",
+			"                fileHandler = RotatingFileHandler(",
 			"                    str(logFp), maxBytes=1_000_000, backupCount=5  # 1MB per file, keep 5 backups",
 			"                )",
-			"                file_handler.setFormatter(formatter)",
-			"                logger.addHandler(file_handler)",
+			"                fileHandler.setFormatter(formatter)",
+			"                logger.addHandler(fileHandler)",
 			"",
 			"        return logger"
 		]
