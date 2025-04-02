@@ -5,7 +5,7 @@
 		"body": [
 			"\"\"\"",
 			"Author: Ankit Anand",
-			"Created on: ${1:DATE}",
+			"Created on: $CURRENT_DATE/$CURRENT_MONTH/$CURRENT_YEAR",
 			"\"\"\"",
 			"",
 			"from FBC import FBC",
@@ -88,7 +88,7 @@
 		"body": [
 			"\"\"\"",
 			"Author: Ankit Anand",
-			"Created on: 23/01/25",
+			"Created on: $CURRENT_DATE/$CURRENT_MONTH/$CURRENT_YEAR",
 			"\"\"\"",
 			"",
 			"from pathlib import Path",
